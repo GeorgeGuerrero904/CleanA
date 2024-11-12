@@ -1,2 +1,2 @@
-# CleanA
-Clean Architecture
+# Clean Architecture
+Clean Architecture training project
