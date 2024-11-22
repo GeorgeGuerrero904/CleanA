@@ -4,7 +4,7 @@ using GloboTicket.TicketManagement.Application.Features.Events.Commands.DeleteEv
 using GloboTicket.TicketManagement.Application.Features.Events.Commands.UpdateEvent;
 using GloboTicket.TicketManagement.Application.Features.Events.Queries.GetEventDetail;
 using GloboTicket.TicketManagement.Application.Features.Events.Queries.GetEventsExport;
-using GloboTicket.TicketManagement.Application.Features.Events.Queries.GetEventsList;
+using GloboTicket.TicketManagement.Application.Features.Events.Queries.GetEventList;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,7 +26,7 @@ namespace GloboTicket.TicketManagement.Api.Controllers
         [ProducesDefaultResponseType]
         public async Task<ActionResult<List<EventListVm>>> GetAllEvents()
         {
-            var result = await _mediator.Send(new GetEventsListQuery());
+            var result = await _mediator.Send(new GetEventsListsQuery());
             return Ok(result);
         }
 
